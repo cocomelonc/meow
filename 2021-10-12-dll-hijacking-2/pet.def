@@ -1,0 +1,4 @@
+EXPORTS
+Bird=pet.Bird @1
+Cat=pet.Cat @2
+Mouse=pet.Mouse @3

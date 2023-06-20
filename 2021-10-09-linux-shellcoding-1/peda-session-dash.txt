@@ -1,0 +1,3 @@
+break _start
+disable $bpnum
+

@@ -1,0 +1,8 @@
+EXPORTS
+CscNetApiGetInterface=cscapi.CscNetApiGetInterface @1
+CscSearchApiGetInterface=cscapi.CscSearchApiGetInterface @2
+OfflineFilesEnable=cscapi.OfflineFilesEnable @3
+OfflineFilesGetShareCachingMode=cscapi.OfflineFilesGetShareCachingMode @4
+OfflineFilesQueryStatus=cscapi.OfflineFilesQueryStatus @5
+OfflineFilesQueryStatusEx=cscapi.OfflineFilesQueryStatusEx @6
+OfflineFilesStart=cscapi.OfflineFilesStart @7
