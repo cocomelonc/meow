@@ -1,6 +1,6 @@
 # Meow-meow
 
-Results (ALL, even bad and unfinished also) of my research on cybersecurity practical cases.      
+Results (ALL, even bad and unfinished ones) of my research on cybersecurity practical cases
 
 ![meow](./meow.png?raw=true)    
 
