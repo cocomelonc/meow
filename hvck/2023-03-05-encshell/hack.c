@@ -11,8 +11,8 @@ int decodeBase64(const BYTE * src, unsigned int srcLen, char * dst, unsigned int
   BOOL fRet;
 
   outLen = dstLen;
-  fRet = CryptStringToBinary( (LPCSTR) src, srcLen, CRYPT_STRING_BASE64, (BYTE * )dst, &outLen, NULL, NULL);	
-  if (!fRet) outLen = 0;  // failed	
+  fRet = CryptStringToBinary( (LPCSTR) src, srcLen, CRYPT_STRING_BASE64, (BYTE * )dst, &outLen, NULL, NULL);  
+  if (!fRet) outLen = 0;  // failed  
   return(outLen);
 }
 

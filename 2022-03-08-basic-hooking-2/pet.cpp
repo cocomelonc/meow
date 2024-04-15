@@ -22,27 +22,27 @@ BOOL APIENTRY DllMain(HMODULE hModule,  DWORD  ul_reason_for_call, LPVOID lpRese
 extern "C" {
   __declspec(dllexport) int _cdecl Cat(LPCTSTR say) {
     MessageBox(NULL, say, "=^..^=", MB_OK);
-	  return 1;
-	}
+    return 1;
+  }
 }
 
 extern "C" {
   __declspec(dllexport) int _cdecl Mouse(LPCTSTR say) {
     MessageBox(NULL, say, "<:3()~~", MB_OK);
-	  return 1;
-	}
+    return 1;
+  }
 }
 
 extern "C" {
   __declspec(dllexport) int _cdecl Frog(LPCTSTR say) {
     MessageBox(NULL, say, "8)~", MB_OK);
-	  return 1;
-	}
+    return 1;
+  }
 }
 
 extern "C" {
   __declspec(dllexport) int _cdecl Bird(LPCTSTR say) {
     MessageBox(NULL, say, "<(-)", MB_OK);
-	  return 1;
-	}
+    return 1;
+  }
 }

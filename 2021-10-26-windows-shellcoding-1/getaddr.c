@@ -7,7 +7,7 @@ getaddr.c - get addresses of functions
 
 int main() {
   unsigned long Kernel32Addr;      // kernel32.dll address
-	unsigned long ExitProcessAddr;   // ExitProcess address
+  unsigned long ExitProcessAddr;   // ExitProcess address
   unsigned long WinExecAddr;       // WinExec address
 
   Kernel32Addr = GetModuleHandle("kernel32.dll");
