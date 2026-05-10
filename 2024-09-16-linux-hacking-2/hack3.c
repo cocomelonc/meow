@@ -1,3 +1,10 @@
+/*
+ * hack3.c
+ * linux hacking part 3: 
+ * find processes PIDs by name
+ * author @cocomelonc
+ * https://cocomelonc.github.io/linux/2024/09/16/linux-hacking-2.html
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
