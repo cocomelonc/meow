@@ -2,6 +2,7 @@
 ; with password "meow"
 ; exits on wrong password
 ; author: @cocomelonc for DEF CON training
+; https://cocomelonc.github.io/linux/2025/11/14/linux-hacking-8.html
 
 section .text
     global _start              ; make _start label visible for the linker, entry point for the program

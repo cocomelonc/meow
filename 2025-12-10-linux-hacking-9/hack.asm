@@ -2,6 +2,7 @@
 ; linux/x64 reverse shell 
 ; password: "meow", connects to 127.0.0.1:4444
 ; author: @cocomelonc for DEFCON training
+; https://cocomelonc.github.io/linux/2025/12/10/linux-hacking-9.html
 
 section .text
     global _start
