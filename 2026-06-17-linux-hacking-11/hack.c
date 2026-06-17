@@ -3,6 +3,7 @@
  * GOT/PLT hijacking: attaches to a running process via ptrace,
  * injects an rwx page, writes hook shellcode, overwrites puts@got
  * author: @cocomelonc
+ * https://cocomelonc.github.io/linux/2026/06/17/linux-hacking-11.html
  */
 #include <stdio.h>
 #include <stdlib.h>
