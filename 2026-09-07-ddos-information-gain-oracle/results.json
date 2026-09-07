@@ -1,0 +1,513 @@
+{
+  "seed": 7,
+  "cap": 12000,
+  "features": [
+    "Flow Duration",
+    "Total Fwd Packets",
+    "Total Backward Packets",
+    "Total Length of Fwd Packets",
+    "Total Length of Bwd Packets",
+    "SYN Flag Count",
+    "ACK Flag Count",
+    "Packet Length Mean"
+  ],
+  "inventory": [
+    {
+      "file": "LDAP.csv",
+      "scanned": 2113234,
+      "labels": {
+        "NetBIOS": 202919,
+        "BENIGN": 5124,
+        "LDAP": 1905191
+      },
+      "sample": 12000,
+      "sample_benign": 19
+    },
+    {
+      "file": "MSSQL.csv",
+      "scanned": 5775786,
+      "labels": {
+        "MSSQL": 5763061,
+        "LDAP": 9931,
+        "BENIGN": 2794
+      },
+      "sample": 12000,
+      "sample_benign": 8
+    },
+    {
+      "file": "NetBIOS.csv",
+      "scanned": 3455899,
+      "labels": {
+        "NetBIOS": 3454578,
+        "BENIGN": 1321
+      },
+      "sample": 12000,
+      "sample_benign": 5
+    },
+    {
+      "file": "Portmap.csv",
+      "scanned": 191694,
+      "labels": {
+        "Portmap": 186960,
+        "BENIGN": 4734
+      },
+      "sample": 12000,
+      "sample_benign": 274
+    },
+    {
+      "file": "Syn.csv",
+      "scanned": 4320541,
+      "labels": {
+        "Syn": 4284751,
+        "BENIGN": 35790
+      },
+      "sample": 12000,
+      "sample_benign": 103
+    },
+    {
+      "file": "UDP.csv",
+      "scanned": 3782206,
+      "labels": {
+        "UDP": 3754680,
+        "MSSQL": 24392,
+        "BENIGN": 3134
+      },
+      "sample": 12000,
+      "sample_benign": 7
+    },
+    {
+      "file": "UDPLag.csv",
+      "scanned": 725165,
+      "labels": {
+        "UDP": 112475,
+        "BENIGN": 4068,
+        "Syn": 606749,
+        "UDPLag": 1873
+      },
+      "sample": 12000,
+      "sample_benign": 62
+    }
+  ],
+  "results": [
+    {
+      "file": "LDAP.csv",
+      "depth": 0,
+      "tn": 0,
+      "fp": 19,
+      "fn": 0,
+      "tp": 11981,
+      "fpr": 1,
+      "recall": 1,
+      "precision": 0.9984166666666666,
+      "mean_questions": 0
+    },
+    {
+      "file": "LDAP.csv",
+      "depth": 1,
+      "tn": 9,
+      "fp": 10,
+      "fn": 1,
+      "tp": 11980,
+      "fpr": 0.5263157894736842,
+      "recall": 0.9999165345129789,
+      "precision": 0.9991659716430359,
+      "mean_questions": 1
+    },
+    {
+      "file": "LDAP.csv",
+      "depth": 2,
+      "tn": 15,
+      "fp": 4,
+      "fn": 1,
+      "tp": 11980,
+      "fpr": 0.21052631578947367,
+      "recall": 0.9999165345129789,
+      "precision": 0.9996662216288384,
+      "mean_questions": 2
+    },
+    {
+      "file": "LDAP.csv",
+      "depth": 4,
+      "tn": 19,
+      "fp": 0,
+      "fn": 11,
+      "tp": 11970,
+      "fpr": 0,
+      "recall": 0.9990818796427677,
+      "precision": 1,
+      "mean_questions": 3.997333333333333
+    },
+    {
+      "file": "LDAP.csv",
+      "depth": 8,
+      "tn": 19,
+      "fp": 0,
+      "fn": 11,
+      "tp": 11970,
+      "fpr": 0,
+      "recall": 0.9990818796427677,
+      "precision": 1,
+      "mean_questions": 5.9095
+    },
+    {
+      "file": "MSSQL.csv",
+      "depth": 0,
+      "tn": 0,
+      "fp": 8,
+      "fn": 0,
+      "tp": 11992,
+      "fpr": 1,
+      "recall": 1,
+      "precision": 0.9993333333333333,
+      "mean_questions": 0
+    },
+    {
+      "file": "MSSQL.csv",
+      "depth": 1,
+      "tn": 4,
+      "fp": 4,
+      "fn": 0,
+      "tp": 11992,
+      "fpr": 0.5,
+      "recall": 1,
+      "precision": 0.9996665555185061,
+      "mean_questions": 1
+    },
+    {
+      "file": "MSSQL.csv",
+      "depth": 2,
+      "tn": 5,
+      "fp": 3,
+      "fn": 1,
+      "tp": 11991,
+      "fpr": 0.375,
+      "recall": 0.9999166110740494,
+      "precision": 0.9997498749374687,
+      "mean_questions": 2
+    },
+    {
+      "file": "MSSQL.csv",
+      "depth": 4,
+      "tn": 8,
+      "fp": 0,
+      "fn": 1,
+      "tp": 11991,
+      "fpr": 0,
+      "recall": 0.9999166110740494,
+      "precision": 1,
+      "mean_questions": 3.999
+    },
+    {
+      "file": "MSSQL.csv",
+      "depth": 8,
+      "tn": 8,
+      "fp": 0,
+      "fn": 1,
+      "tp": 11991,
+      "fpr": 0,
+      "recall": 0.9999166110740494,
+      "precision": 1,
+      "mean_questions": 6.71775
+    },
+    {
+      "file": "NetBIOS.csv",
+      "depth": 0,
+      "tn": 0,
+      "fp": 5,
+      "fn": 0,
+      "tp": 11995,
+      "fpr": 1,
+      "recall": 1,
+      "precision": 0.9995833333333334,
+      "mean_questions": 0
+    },
+    {
+      "file": "NetBIOS.csv",
+      "depth": 1,
+      "tn": 3,
+      "fp": 2,
+      "fn": 0,
+      "tp": 11995,
+      "fpr": 0.4,
+      "recall": 1,
+      "precision": 0.9998332916562473,
+      "mean_questions": 1
+    },
+    {
+      "file": "NetBIOS.csv",
+      "depth": 2,
+      "tn": 4,
+      "fp": 1,
+      "fn": 0,
+      "tp": 11995,
+      "fpr": 0.2,
+      "recall": 1,
+      "precision": 0.9999166388796266,
+      "mean_questions": 2
+    },
+    {
+      "file": "NetBIOS.csv",
+      "depth": 4,
+      "tn": 5,
+      "fp": 0,
+      "fn": 37,
+      "tp": 11958,
+      "fpr": 0,
+      "recall": 0.9969153814089203,
+      "precision": 1,
+      "mean_questions": 3.9993333333333334
+    },
+    {
+      "file": "NetBIOS.csv",
+      "depth": 8,
+      "tn": 5,
+      "fp": 0,
+      "fn": 37,
+      "tp": 11958,
+      "fpr": 0,
+      "recall": 0.9969153814089203,
+      "precision": 1,
+      "mean_questions": 6.08925
+    },
+    {
+      "file": "Portmap.csv",
+      "depth": 0,
+      "tn": 0,
+      "fp": 274,
+      "fn": 0,
+      "tp": 11726,
+      "fpr": 1,
+      "recall": 1,
+      "precision": 0.9771666666666666,
+      "mean_questions": 0
+    },
+    {
+      "file": "Portmap.csv",
+      "depth": 1,
+      "tn": 140,
+      "fp": 134,
+      "fn": 2,
+      "tp": 11724,
+      "fpr": 0.48905109489051096,
+      "recall": 0.9998294388538291,
+      "precision": 0.9886996120762355,
+      "mean_questions": 1
+    },
+    {
+      "file": "Portmap.csv",
+      "depth": 2,
+      "tn": 140,
+      "fp": 134,
+      "fn": 2,
+      "tp": 11724,
+      "fpr": 0.48905109489051096,
+      "recall": 0.9998294388538291,
+      "precision": 0.9886996120762355,
+      "mean_questions": 1.9881666666666666
+    },
+    {
+      "file": "Portmap.csv",
+      "depth": 4,
+      "tn": 254,
+      "fp": 20,
+      "fn": 11,
+      "tp": 11715,
+      "fpr": 0.072992700729927,
+      "recall": 0.99906191369606,
+      "precision": 0.9982956966340009,
+      "mean_questions": 2.9821666666666666
+    },
+    {
+      "file": "Portmap.csv",
+      "depth": 8,
+      "tn": 254,
+      "fp": 20,
+      "fn": 11,
+      "tp": 11715,
+      "fpr": 0.072992700729927,
+      "recall": 0.99906191369606,
+      "precision": 0.9982956966340009,
+      "mean_questions": 2.99075
+    },
+    {
+      "file": "Syn.csv",
+      "depth": 0,
+      "tn": 0,
+      "fp": 103,
+      "fn": 0,
+      "tp": 11897,
+      "fpr": 1,
+      "recall": 1,
+      "precision": 0.9914166666666666,
+      "mean_questions": 0
+    },
+    {
+      "file": "Syn.csv",
+      "depth": 1,
+      "tn": 51,
+      "fp": 52,
+      "fn": 8,
+      "tp": 11889,
+      "fpr": 0.5048543689320388,
+      "recall": 0.9993275615701437,
+      "precision": 0.9956452558412193,
+      "mean_questions": 1
+    },
+    {
+      "file": "Syn.csv",
+      "depth": 2,
+      "tn": 77,
+      "fp": 26,
+      "fn": 15,
+      "tp": 11882,
+      "fpr": 0.2524271844660194,
+      "recall": 0.9987391779440195,
+      "precision": 0.9978165938864629,
+      "mean_questions": 1.9950833333333333
+    },
+    {
+      "file": "Syn.csv",
+      "depth": 4,
+      "tn": 77,
+      "fp": 26,
+      "fn": 15,
+      "tp": 11882,
+      "fpr": 0.2524271844660194,
+      "recall": 0.9987391779440195,
+      "precision": 0.9978165938864629,
+      "mean_questions": 3.97975
+    },
+    {
+      "file": "Syn.csv",
+      "depth": 8,
+      "tn": 77,
+      "fp": 26,
+      "fn": 15,
+      "tp": 11882,
+      "fpr": 0.2524271844660194,
+      "recall": 0.9987391779440195,
+      "precision": 0.9978165938864629,
+      "mean_questions": 5.07075
+    },
+    {
+      "file": "UDP.csv",
+      "depth": 0,
+      "tn": 0,
+      "fp": 7,
+      "fn": 0,
+      "tp": 11993,
+      "fpr": 1,
+      "recall": 1,
+      "precision": 0.9994166666666666,
+      "mean_questions": 0
+    },
+    {
+      "file": "UDP.csv",
+      "depth": 1,
+      "tn": 2,
+      "fp": 5,
+      "fn": 0,
+      "tp": 11993,
+      "fpr": 0.7142857142857143,
+      "recall": 1,
+      "precision": 0.9995832638773129,
+      "mean_questions": 1
+    },
+    {
+      "file": "UDP.csv",
+      "depth": 2,
+      "tn": 3,
+      "fp": 4,
+      "fn": 0,
+      "tp": 11993,
+      "fpr": 0.5714285714285714,
+      "recall": 1,
+      "precision": 0.9996665833124948,
+      "mean_questions": 2
+    },
+    {
+      "file": "UDP.csv",
+      "depth": 4,
+      "tn": 7,
+      "fp": 0,
+      "fn": 0,
+      "tp": 11993,
+      "fpr": 0,
+      "recall": 1,
+      "precision": 1,
+      "mean_questions": 3.9995
+    },
+    {
+      "file": "UDP.csv",
+      "depth": 8,
+      "tn": 7,
+      "fp": 0,
+      "fn": 0,
+      "tp": 11993,
+      "fpr": 0,
+      "recall": 1,
+      "precision": 1,
+      "mean_questions": 6.485333333333333
+    },
+    {
+      "file": "UDPLag.csv",
+      "depth": 0,
+      "tn": 0,
+      "fp": 62,
+      "fn": 0,
+      "tp": 11938,
+      "fpr": 1,
+      "recall": 1,
+      "precision": 0.9948333333333333,
+      "mean_questions": 0
+    },
+    {
+      "file": "UDPLag.csv",
+      "depth": 1,
+      "tn": 24,
+      "fp": 38,
+      "fn": 1,
+      "tp": 11937,
+      "fpr": 0.6129032258064516,
+      "recall": 0.9999162338750209,
+      "precision": 0.9968267223382046,
+      "mean_questions": 1
+    },
+    {
+      "file": "UDPLag.csv",
+      "depth": 2,
+      "tn": 40,
+      "fp": 22,
+      "fn": 3,
+      "tp": 11935,
+      "fpr": 0.3548387096774194,
+      "recall": 0.9997487016250628,
+      "precision": 0.9981600735970562,
+      "mean_questions": 2
+    },
+    {
+      "file": "UDPLag.csv",
+      "depth": 4,
+      "tn": 40,
+      "fp": 22,
+      "fn": 3,
+      "tp": 11935,
+      "fpr": 0.3548387096774194,
+      "recall": 0.9997487016250628,
+      "precision": 0.9981600735970562,
+      "mean_questions": 3.9928333333333335
+    },
+    {
+      "file": "UDPLag.csv",
+      "depth": 8,
+      "tn": 40,
+      "fp": 22,
+      "fn": 3,
+      "tp": 11935,
+      "fpr": 0.3548387096774194,
+      "recall": 0.9997487016250628,
+      "precision": 0.9981600735970562,
+      "mean_questions": 5.08625
+    }
+  ]
+}
