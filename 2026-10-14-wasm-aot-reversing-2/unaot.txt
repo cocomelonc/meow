@@ -1,0 +1,40 @@
+== unaot: add.aot (860 bytes) ==
+magic    : 0x746f6100 (\0aot ok)
+version  : 5
+
+[0] section TARGET_INFO        type=0  off=0x10  size=48
+      little-endian, 64-bit  abi=0  e_type=1  machine=0x3e (x86_64)
+      e_version=1  e_flags=0x0  features=0x0000000000000000  arch="x86_64"
+
+[1] section INIT_DATA          type=1  off=0x48  size=256
+
+[2] section TEXT (native code) type=2  off=0x150  size=88
+      -> native machine code (88 bytes); disassemble per arch
+
+[3] section FUNCTION           type=3  off=0x1b0  size=60
+      3 function(s) (func index -> TEXT offset)
+
+[4] section EXPORT             type=4  off=0x1f4  size=269
+      13 export(s):
+        [0] memory index=0    "memory"
+        [1] func   index=0    "__wasm_call_ctors"
+        [2] func   index=1    "add"
+        [3] func   index=2    "fib"
+        [4] global index=1    "__dso_handle"
+        [5] global index=2    "__data_end"
+        [6] global index=3    "__stack_low"
+        [7] global index=4    "__stack_high"
+        [8] global index=5    "__global_base"
+        [9] global index=6    "__heap_base"
+        [10] global index=7    "__heap_end"
+        [11] global index=8    "__memory_base"
+        [12] global index=9    "__table_base"
+
+[5] section RELOCATION         type=5  off=0x30c  size=80
+
+6 sections.
+
+== functions (symbolized) ==   (text @ file 0x150, assuming import_func_count=0)
+  [ 0] text+0x0       file@0x150     size=16    type=0  __wasm_call_ctors
+  [ 1] text+0x10      file@0x160     size=16    type=1  add
+  [ 2] text+0x20      file@0x170     size=56    type=2  fib
