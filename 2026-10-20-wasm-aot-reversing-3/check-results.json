@@ -1,0 +1,48 @@
+{
+  "fixtures": [
+    {
+      "fixture": "add.aot",
+      "sha256": "42ac26212b9955dd0fca3e1e8a918f833e3221136ca4c143bbdd49903dbe857b",
+      "passed": true
+    },
+    {
+      "fixture": "add_aarch64.aot",
+      "sha256": "190775ef8fe218436803fae0d1e6e7d41d0afba87aad6889f579e243cb4d043d",
+      "passed": true
+    },
+    {
+      "fixture": "add_riscv64.aot",
+      "sha256": "80d18428db4c66f97a16e30cd8de738529b5c4c4dc22d3dd6e054e46b04f57d8",
+      "passed": true
+    },
+    {
+      "fixture": "add_i386.aot",
+      "sha256": "bc1ea486755c3a9ad8c1e0c7757aadb4805c841d9a2f44d19c1192c2e659c2e7",
+      "passed": true
+    },
+    {
+      "fixture": "import.aot",
+      "sha256": "ec8ca350b59679ed49aa15983f494eec76ca42ec3000610368266c14c0ab0d76",
+      "passed": true
+    }
+  ],
+  "negative_cases": [
+    "symbol_count_overflow",
+    "string_table_outside_section",
+    "symbol_offset_outside_table",
+    "symbol_index_out_of_range",
+    "group_name_index_out_of_range",
+    "group_count_overflow",
+    "relocation_count_overflow",
+    "code_offset_out_of_range",
+    "literal_size_overflow",
+    "unsupported_version",
+    "missing_symbol_NUL"
+  ],
+  "all_prefix_truncations_rejected": 860,
+  "sanitizers": "AddressSanitizer + UndefinedBehaviorSanitizer; no findings in valid and targeted malformed cases",
+  "x86_patch_field_file_offset": "0x18f",
+  "x86_call_instruction_file_offset": "0x18e",
+  "x86_fib_entry_file_offset": "0x174",
+  "relocation_record_alignment": 4
+}

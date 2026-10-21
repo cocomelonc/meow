@@ -1,0 +1,12 @@
+target: aarch64v8, 64-bit, machine=0xb7
+TEXT: body@0x150, literal_size=0, code@0x154, code span=92
+
+== defined functions ==
+[0] code+0x0 file@0x154 span=4 type=0 __wasm_call_ctors
+[1] code+0x4 file@0x158 span=8 type=1 add
+[2] code+0xc file@0x160 span=80 type=2 fib
+
+== relocations ==
+2 symbols, 1 group(s)
+group .rela.text: 1 relocation(s)
+  off=0x30 R_AARCH64_CALL26(283) -> aot_func#2 add=0 file@0x184 | fib+0x24 -> fib [target file@0x160]

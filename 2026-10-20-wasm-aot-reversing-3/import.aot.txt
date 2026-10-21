@@ -1,0 +1,15 @@
+target: x86_64, 64-bit, machine=0x3e
+TEXT: body@0x158, literal_size=0, code@0x15c, code span=140
+
+== defined functions ==
+[0] code+0x0 file@0x15c span=16 type=1 __wasm_call_ctors
+[1] code+0x10 file@0x16c span=32 type=0 use_tick
+[2] code+0x30 file@0x18c span=92 type=0 bounce
+
+== relocations ==
+3 symbols, 1 group(s)
+group .rela.text: 4 relocation(s)
+  off=0x22 R_X86_64_PLT32(4) -> aot_invoke_native add=-4 file@0x17e | use_tick+0x12 -> aot_invoke_native
+  off=0x4a R_X86_64_PLT32(4) -> aot_func#2 add=-4 file@0x1a6 | bounce+0x1a -> bounce [target file@0x18c]
+  off=0x61 R_X86_64_PLT32(4) -> aot_invoke_native add=-4 file@0x1bd | bounce+0x31 -> aot_invoke_native
+  off=0x79 R_X86_64_PLT32(4) -> aot_invoke_native add=-4 file@0x1d5 | bounce+0x49 -> aot_invoke_native

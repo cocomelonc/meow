@@ -1,0 +1,18 @@
+target: i386, 32-bit, machine=0x3
+TEXT: body@0x174, literal_size=0, code@0x178, code span=292
+
+== defined functions ==
+[0] code+0x0 file@0x178 span=48 type=0 __wasm_call_ctors
+[1] code+0x30 file@0x1a8 span=96 type=1 add
+[2] code+0x90 file@0x208 span=148 type=2 fib
+
+== relocations ==
+4 symbols, 1 group(s)
+group .rel.text: 7 relocation(s)
+  off=0xd R_386_32(1) -> .aot_stack_sizes add=0 file@0x185 | __wasm_call_ctors+0xd -> .aot_stack_sizes
+  off=0x25 R_386_PLT32(4) -> aot_set_exception_with_id add=0 file@0x19d | __wasm_call_ctors+0x25 -> aot_set_exception_with_id
+  off=0x3d R_386_32(1) -> .aot_stack_sizes add=0 file@0x1b5 | add+0xd -> .aot_stack_sizes
+  off=0x6a R_386_PLT32(4) -> aot_set_exception_with_id add=0 file@0x1e2 | add+0x3a -> aot_set_exception_with_id
+  off=0x9d R_386_32(1) -> .aot_stack_sizes add=0 file@0x215 | fib+0xd -> .aot_stack_sizes
+  off=0xc2 R_386_PLT32(4) -> aot_set_exception_with_id add=0 file@0x23a | fib+0x32 -> aot_set_exception_with_id
+  off=0xf9 R_386_PLT32(4) -> aot_func#2 add=0 file@0x271 | fib+0x69 -> fib [target file@0x208]
