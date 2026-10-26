@@ -1,6 +1,8 @@
 /*
  * audit.c
  * logs readdir() results and passes them through unchanged
+ * author: cocomelonc
+ * https://cocomelonc.github.io/linux/2026/10/26/linux-hacking-12.html
  */
 
 #define _GNU_SOURCE

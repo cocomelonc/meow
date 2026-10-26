@@ -2,6 +2,7 @@
  * hide.c
  * hides directory entries whose name starts with "secret_"
  * author: @cocomelonc
+ * https://cocomelonc.github.io/linux/2026/10/26/linux-hacking-12.html
  */
 
 #define _GNU_SOURCE

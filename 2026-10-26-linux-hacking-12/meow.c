@@ -1,6 +1,7 @@
 /*
  * meow.c
  * lists the contents of a directory
+ * https://cocomelonc.github.io/linux/2026/10/26/linux-hacking-12.html
  */
 
 #include <dirent.h>
