@@ -1,0 +1,5 @@
+.
+..
+meow.txt
+notes.txt
+secret_passwords.txt
